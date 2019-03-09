@@ -13,6 +13,9 @@ import VueRouter from 'vue-router'
 // Single File Components.
 // For more info, go to: https://vuejs.org/v2/guide/single-file-components.html
 import App from './App.vue'
+// Route components
+import Home from './views/Home'
+import Pets from './views/Pets'
 
 Vue.config.productionTip = false
 
@@ -28,11 +31,21 @@ Vue.use(Vuetify)
 // The router will be available in the components for navigation, URLs, etc...
 Vue.use(VueRouter)
 
+const routes = [
+  { path: '/', component: Home },
+  { path: '/pets', component: Pets },
+]
+
+const router = new VueRouter({ routes })
+
 // Initialize Vue.js
 new Vue({
   // Render the App component into the the element with id: app
   // See src/App.vue and public/index.html files
   render: h => h(App),
+  // Object initialization shorthand from variables. It's equivalent to:
+  // router: router
+  router,
   // In public/index.html, there is a div with #app selector:
   // <div id="app"></div>
 }).$mount('#app')

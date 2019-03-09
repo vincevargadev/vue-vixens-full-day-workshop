@@ -6,7 +6,7 @@
           <h1>My Pet Store</h1>
           <v-btn @click="themeSwitched = !themeSwitched">Switch theme</v-btn>
         </header>
-        <Home/>
+        <router-view/>
         <footer class="app-footer dark-brown">
           <p>123 Main Street | Smithfield, RI 90987 | 345-456-5678</p>
         </footer>
@@ -16,13 +16,8 @@
 </template>
 
 <script>
-import Home from './views/Home.vue'
-
 export default {
   name: 'app',
-  components: {
-    Home,
-  },
   data() {
     return { themeSwitched: false }
   },
