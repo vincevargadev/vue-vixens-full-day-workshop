@@ -2,8 +2,12 @@
 
 // Vue is imported from its npm package
 import Vue from 'vue'
-
+// Vuetify is a semantic component framework for Vue.
+// It aims to provide clean, semantic and reusable components for building your application.
 import Vuetify from 'vuetify'
+// The vue-router is Vue's official router.
+// A router is a the library that makes moving from page to page easy and efficient.
+import VueRouter from 'vue-router'
 
 // Vue projects use .vue files very often.They are called
 // Single File Components.
@@ -15,10 +19,14 @@ Vue.config.productionTip = false
 // Vuetify CSS styles are included as well.
 import 'vuetify/dist/vuetify.min.css'
 
-// Ensure Vuetify's themes and components will be available throughout the Vue app.
-// What is this: Vue.use? It's registering a plugin: https://vuejs.org/v2/guide/plugins.html
-// Plugins usually add global-level functionality to Vue: in this case we add Vuetify to Vue
+
+// Register plugins https://vuejs.org/v2/guide/plugins.html
+// Plugins usually add global-level functionality to Vue.
+
+// Vuetify's themes and components will be available throughout the Vue app.
 Vue.use(Vuetify)
+// The router will be available in the components for navigation, URLs, etc...
+Vue.use(VueRouter)
 
 // Initialize Vue.js
 new Vue({
