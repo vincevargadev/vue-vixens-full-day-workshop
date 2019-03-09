@@ -28,3 +28,34 @@ I'm going to go through Vue Vixen's full day workshop. For more info, go to [`vu
     * Create a functional form to adopt a dog
 * [Chapter 6](https://vuevixens.github.io/docs/workshop/full-day/ch6.html): Mobilize me
     * Create 'Tindogs', an app to sort through a deck of dog images. This app will be built in the NativeScript Playground
+
+
+# `full-day-workshop`
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
