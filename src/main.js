@@ -2,12 +2,23 @@
 
 // Vue is imported from its npm package
 import Vue from 'vue'
+
+import Vuetify from 'vuetify'
+
 // Vue projects use .vue files very often.They are called
 // Single File Components.
 // For more info, go to: https://vuejs.org/v2/guide/single-file-components.html
 import App from './App.vue'
 
 Vue.config.productionTip = false
+
+// Vuetify CSS styles are included as well.
+import 'vuetify/dist/vuetify.min.css'
+
+// Ensure Vuetify's themes and components will be available throughout the Vue app.
+// What is this: Vue.use? It's registering a plugin: https://vuejs.org/v2/guide/plugins.html
+// Plugins usually add global-level functionality to Vue: in this case we add Vuetify to Vue
+Vue.use(Vuetify)
 
 // Initialize Vue.js
 new Vue({
