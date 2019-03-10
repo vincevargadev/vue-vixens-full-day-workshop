@@ -11,7 +11,7 @@
           <v-list-tile-content>
             {{ dog.name }}
           </v-list-tile-content>
-          <v-list-tile-action>
+          <v-list-tile-action @click="removeFromFavorites(dog)">
             <v-icon>delete</v-icon>
           </v-list-tile-action>
         </v-list-tile>
@@ -21,7 +21,12 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
+  methods: {
+    ...mapActions(['removeFromFavorites'])
+  },
   computed: {
     favorites() {
       return this.$store.state.favorites

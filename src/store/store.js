@@ -24,11 +24,17 @@ export default () => new Vuex.Store({
     addToFavorites(state, payload) {
       if (state.favorites.includes(payload)) return
       state.favorites.push(payload)
+    },
+    removeFromFavorites(state, payload) {
+      state.favorites.splice(state.favorites.indexOf(payload), 1)
     }
   },
   actions: {
     addToFavorites({ commit }, payload) {
       commit('addToFavorites', payload)
+    },
+    removeFromFavorites({ commit }, payload) {
+      commit('removeFromFavorites', payload)
     }
   }
 })
