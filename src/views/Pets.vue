@@ -8,7 +8,7 @@
           Use a component that we created for encapsulating a dog card.
           We pass information to the component about a dog
         -->
-        <Dog :dog="dog"/>
+        <Dog :dog="dog" @addToFavorites="addToFavorites"/>
       </v-flex>
     </v-layout>
   </v-container>
@@ -16,6 +16,7 @@
 
 <script>
 import axios from 'axios'
+import { mapActions } from 'vuex'
 import Dog from '../components/Dog.vue'
 import { dogs as dataDogs } from '../data/dogs'
 
@@ -25,6 +26,9 @@ export default {
   components: {
     // Let Vue know that we are doing to use the Dog component
     Dog
+  },
+  methods: {
+    ...mapActions(['addToFavorites'])
   },
   data() {
     return { dogs: [] }
