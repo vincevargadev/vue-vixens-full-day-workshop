@@ -19,5 +19,15 @@ export default () => new Vuex.Store({
         img: "https://dog.ceo/api/img/boxer/n02108089_14112.jpg"
       }
     ]
+  },
+  mutations: {
+    addToFavorites(state, payload) {
+      state.favorites.push(payload)
+    }
+  },
+  actions: {
+    addToFavorites({ commit }, payload) {
+      commit('addToFavorites', payload)
+    }
   }
 })
