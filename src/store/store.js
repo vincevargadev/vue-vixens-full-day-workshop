@@ -22,6 +22,7 @@ export default () => new Vuex.Store({
   },
   mutations: {
     addToFavorites(state, payload) {
+      if (state.favorites.includes(payload)) return
       state.favorites.push(payload)
     }
   },
