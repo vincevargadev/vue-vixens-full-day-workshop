@@ -9,6 +9,10 @@
               <v-btn to="/" flat>Home</v-btn>
               <v-btn to="/pets" flat>Pets</v-btn>
             </v-toolbar-items>
+            <v-spacer></v-spacer>
+            <router-link to="/favorites">
+              <v-icon large>loyalty</v-icon>
+            </router-link>
           </v-toolbar>
           <v-btn @click="themeSwitched = !themeSwitched">Switch theme</v-btn>
         </header>

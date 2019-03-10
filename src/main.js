@@ -13,7 +13,8 @@ import VueRouter from 'vue-router'
 // Single File Components.
 // For more info, go to: https://vuejs.org/v2/guide/single-file-components.html
 import App from './App.vue'
-// Route components
+// Views. Vue components that are associated with a given route
+import Favorites from './views/Favorites'
 import Home from './views/Home'
 import Pets from './views/Pets'
 
@@ -33,6 +34,7 @@ Vue.use(VueRouter)
 
 const routes = [
   { path: '/', component: Home },
+  { path: '/favorites', component: Favorites },
   { path: '/pets', component: Pets },
 ]
 
